@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 湘南高校の学校アカウント（メールのリンクでログイン済み）か
+    function school() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.matches('.*@gl[.]pen-kanagawa[.]ed[.]jp$');
+    }
+    // 管理者（公開用の集計を更新できる人）。メールアドレスを書き換えて使う
+    function admin() {
+      return school() && request.auth.token.email in ['ADMIN_EMAIL@gl.pen-kanagawa.ed.jp'];
+    }
+    function okScore(m, k) {
+      return !(k in m) || (m[k] is number && m[k] >= 0 && m[k] <= 100);
+    }
+    function validEntry() {
+      let d = request.resource.data;
+      let s = d.scores;
+      return d.keys().hasOnly(['nickname', 'public', 'scores', 'total', 'updatedAt'])
+        && d.nickname is string && d.nickname.size() >= 1 && d.nickname.size() <= 20
+        && d.public is bool
+        && s is map
+        && s.keys().hasOnly(['現代の国語', '言語文化', '数学Ⅰ', '数学A', '化学基礎', '生物基礎', 'ECⅠ', '論表Ⅰ', '地理総合', '公共', '情報Ⅰ'])
+        && okScore(s, '現代の国語') && okScore(s, '言語文化') && okScore(s, '数学Ⅰ') && okScore(s, '数学A')
+        && okScore(s, '化学基礎') && okScore(s, '生物基礎') && okScore(s, 'ECⅠ') && okScore(s, '論表Ⅰ')
+        && okScore(s, '地理総合') && okScore(s, '公共') && okScore(s, '情報Ⅰ')
+        && (d.total == null || (d.total is number && d.total >= 0 && d.total <= 1100));
+    }
+
+    // 各試験の提出（1人1件。ドキュメントIDはログインしたアカウントのID）
+    match /exams/{exam}/entries/{uid} {
+      allow read: if admin() || (school() && (resource.data.public == true || request.auth.uid == uid));
+      allow create, update: if school() && request.auth.uid == uid && validEntry();
+      allow delete: if (school() && request.auth.uid == uid) || admin();
+    }
+    // 出席番号など本人と管理者だけが見られる情報
+    match /private/{uid} {
+      allow read: if (school() && request.auth.uid == uid) || admin();
+      allow write: if school() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['number', 'email', 'updatedAt'])
+        && request.resource.data.number.matches('^[0-9]{4}$');
+    }
+    // 公開用の集計（誰でも読める・管理者だけが書ける）
+    match /stats/{exam} {
+      allow read: if true;
+      allow write: if admin();
+    }
+  }
+}
