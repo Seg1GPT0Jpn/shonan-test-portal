@@ -19,9 +19,10 @@ const ICON = {
   library: '<path d="M4 4h5v16H4zM10 4h5v16h-5zM16 5l4 1-3 15-4-1z"/>',
   schedule: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
   progress: '<path d="M4 12l5 5L20 6"/>',
+  ranking: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
   quiz: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/>'
 };
-const TABS = [['home', 'ホーム'], ['library', '教材'], ['schedule', '日程・範囲'], ['progress', '進み具合'], ['quiz', 'ミニテスト']];
+const TABS = [['home', 'ホーム'], ['library', '教材'], ['schedule', '日程'], ['progress', '進み具合'], ['quiz', 'テスト'], ['ranking', '成績']];
 function drawTabs(cur) {
   const h = TABS.map(([k, t]) => `<a href="#/${k}" class="${k === cur ? 'on' : ''}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICON[k]}</svg><span>${t}</span></a>`).join('');
   $('#tabs-top').innerHTML = h; $('#tabs-bottom').innerHTML = h;
@@ -31,7 +32,7 @@ function daysTo(iso) { const t = new Date(); t.setHours(0, 0, 0, 0); return Math
 function mb(n) { return (n / 1e6).toFixed(n > 1e7 ? 0 : 1) + 'MB'; }
 
 // ===== ルーティング =====
-const routes = { home, library, schedule, progress, quiz };
+const routes = { home, library, schedule, progress, quiz, ranking };
 async function router() {
   const [page, ...rest] = (location.hash.replace(/^#\/?/, '') || 'home').split('/');
   const fn = routes[page] || home;
@@ -62,7 +63,7 @@ async function home(app) {
     <div class="card">
       <h3 style="margin-top:0">百問繚乱（学校のテスト結果）</h3>
       <p class="muted">学校の「百問繚乱」は学校のログインが必要なため、このページから直接は結果を読み込めません。結果はリンク先で確認し、「進み具合」の記録欄にメモできます。</p>
-      <div class="row"><a class="btn pri" href="${HYAKUMON}" target="_blank" rel="noopener">百問繚乱を開く</a><a class="btn" href="#/progress/score">結果をメモする</a></div>
+      <div class="row"><a class="btn pri" href="${HYAKUMON}" target="_blank" rel="noopener">百問繚乱を開く</a><a class="btn" href="#/progress/score">結果をメモする</a><a class="btn" href="#/ranking">みんなの成績</a></div>
     </div>
     <div class="card">
       <h3 style="margin-top:0">お知らせ</h3>
@@ -291,4 +292,37 @@ async function runTerms(app, file) {
     $('#ta').onkeydown = e => { if (e.key === 'Enter') reveal($('#ta').value.trim()); };
   }
   show();
+}
+
+// ===== 成績（みんなの分布・順位表への入口） =====
+async function ranking(app, [examSel]) {
+  const [cfg, st] = await Promise.all([data('config.json'), data('stats.json')]);
+  const exams = st.exams || [];
+  const ex = exams.find(e => e.exam === examSel) || exams[0];
+  const pct = (s, x) => { // x点以上の人の割合（10点刻みの度数から近似）
+    let above = 0; for (const b of s.bins) { if (b.from >= x) above += b.count; else if (b.to > x) above += b.count * (b.to - x) / (b.to - b.from); }
+    return Math.max(0, Math.min(100, above / s.n * 100));
+  };
+  const chart = s => { const mx = Math.max(...s.bins.map(b => b.count), 1); const w = 300, h = 120, bw = w / s.bins.length;
+    return `<svg viewBox="0 0 ${w} ${h + 18}" style="width:100%;max-width:420px">${s.bins.map((b, i) => `<rect x="${i * bw + 2}" y="${h - b.count / mx * h}" width="${bw - 4}" height="${b.count / mx * h}" rx="2" fill="var(--pri2)"><title>${b.from}〜${b.to}点：${b.count}人</title></rect>`).join('')}
+    <line x1="0" y1="${h}" x2="${w}" y2="${h}" stroke="var(--line)"/>${s.bins.filter((_, i) => i % 2 === 0).map((b, j) => `<text x="${j * 2 * bw + 2}" y="${h + 13}" font-size="9" fill="var(--sub)">${b.from}</text>`).join('')}</svg>`; };
+  app.innerHTML = `<h1>みんなの成績</h1>
+  <div class="grid">
+    <div class="card"><h3 style="margin-top:0">点数を提供する（協力者募集）</h3>
+      <p class="muted">学校アカウントでだけ回答できるフォームです。出席番号は二重回答を防ぐためだけに使い、公開しません。</p>
+      ${cfg.formUrl ? `<a class="btn pri" href="${esc(cfg.formUrl)}" target="_blank" rel="noopener">回答フォームを開く</a>` : '<span class="muted">（フォームは準備中です）</span>'}</div>
+    <div class="card"><h3 style="margin-top:0">順位表（学校アカウント限定）</h3>
+      <p class="muted">掲載に同意した人だけがニックネームで載ります。学校アカウントでログインした人だけが見られます。</p>
+      ${cfg.rankSheetUrl ? `<a class="btn" href="${esc(cfg.rankSheetUrl)}" target="_blank" rel="noopener">順位表を開く</a>` : '<span class="muted">（順位表は準備中です）</span>'}</div>
+  </div>
+  <h2>点数の分布（誰の点数かは分からない形で公開）</h2>
+  ${!ex ? `<div class="card muted">まだ集計できるデータがありません。協力者が各科目 ${cfg.minN} 人以上集まったら、平均と分布をここに表示します。</div>` : `
+  <div class="chips">${exams.map(e => `<a class="chip ${e === ex ? 'on' : ''}" style="text-decoration:none" href="#/ranking/${encodeURIComponent(e.exam)}">${esc(e.exam)}</a>`).join('')}</div>
+  <p class="muted">更新日 ${esc(st.updated)}・回答者が ${cfg.minN} 人未満の科目は表示しません。</p>
+  <div class="card"><h3 style="margin-top:0">自分の位置を調べる</h3><div class="row"><select id="rs">${ex.subjects.map((s, i) => `<option value="${i}">${esc(s.subject)}</option>`).join('')}</select><input type="number" id="rx" placeholder="自分の点数" style="width:120px"><button class="btn pri" id="rg">調べる</button></div><div id="rr" class="exp" style="display:none"></div>
+  <p class="muted" style="margin:8px 0 0">入力した点数はどこにも送信されません（この画面の中だけで計算します）。</p></div>
+  <div class="grid" style="margin-top:12px">${ex.subjects.map(s => `<div class="card"><b>${esc(s.subject)}</b> <span class="muted">${s.n}人・平均 ${s.mean}・標準偏差 ${s.sd}</span>${chart(s)}</div>`).join('')}</div>`}`;
+  if (ex) $('#rg').onclick = () => { const s = ex.subjects[+$('#rs').value]; const x = +$('#rx').value; if ($('#rx').value === '') return;
+    const p = pct(s, x), dev = s.sd ? (50 + 10 * (x - s.mean) / s.sd).toFixed(1) : '-';
+    $('#rr').style.display = 'block'; $('#rr').innerHTML = `${esc(s.subject)} ${x}点は、回答者${s.n}人の中で<b>上位 約${Math.max(1, Math.round(p))}%</b>（およそ ${Math.max(1, Math.round(p / 100 * s.n))} 番目前後）です。偏差値の目安は <b>${dev}</b> です。<br><span class="muted">10点刻みの人数から計算した目安です。協力者だけの集計なので、学年全体の順位とは違います。</span>`; };
 }
