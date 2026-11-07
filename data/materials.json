@@ -1,0 +1,262 @@
+[
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "kind": "yoso",
+  "title": "現代の国語 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/現代の国語_後期中間_予想問題.pdf",
+  "size": 832075,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "gengo",
+  "kind": "yoso",
+  "title": "言語文化 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/言語文化_後期中間_予想問題.pdf",
+  "size": 1183448,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "math1",
+  "kind": "yoso",
+  "title": "数学Ⅰ 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/数学Ⅰ_後期中間_予想問題.pdf",
+  "size": 1189053,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "mathA",
+  "kind": "yoso",
+  "title": "数学A 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/数学A_後期中間_予想問題.pdf",
+  "size": 1045639,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "chem",
+  "kind": "yoso",
+  "title": "化学基礎 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/化学基礎_後期中間_予想問題.pdf",
+  "size": 677650,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "bio",
+  "kind": "yoso",
+  "title": "生物基礎 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/生物基礎_後期中間_予想問題.pdf",
+  "size": 1263475,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "kokyo",
+  "kind": "yoso",
+  "title": "公共 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/公共_後期中間_予想問題.pdf",
+  "size": 1649252,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "info",
+  "kind": "yoso",
+  "title": "情報Ⅰ 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/情報Ⅰ_後期中間_予想問題.pdf",
+  "size": 1317558,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "le",
+  "kind": "yoso",
+  "title": "LEⅠ 後期中間 予想問題",
+  "desc": "問題＋解答・解説",
+  "file": "files/2026-kouki-chukan/LE_後期中間_予想問題.pdf",
+  "size": 446581,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "ec",
+  "kind": "yoso",
+  "title": "ECⅠ 後期中間 予想問題",
+  "desc": "問題＋リスニング原稿＋解答・解説",
+  "file": "files/2026-kouki-chukan/EC_後期中間_予想問題.pdf",
+  "size": 1093045,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "le",
+  "kind": "matome",
+  "title": "Scramble イディオムまとめ（Theme 225〜233）",
+  "desc": "No.1046〜1143",
+  "file": "files/2026-kouki-chukan/LE_Scramble_イディオムまとめ.pdf",
+  "size": 950084,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "ec",
+  "kind": "matome",
+  "title": "CROWN ECⅠ Lesson 5・6 テスト対策まとめ",
+  "desc": "",
+  "file": "files/2026-kouki-chukan/CROWN_ECI_L5-6_テスト対策まとめ.pdf",
+  "size": 1467792,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "kind": "matome",
+  "title": "現代文キーワード 重要語句まとめ",
+  "desc": "",
+  "file": "files/2026-kouki-chukan/現代文キーワード_重要語句まとめ.pdf",
+  "size": 1487031,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "kind": "yoso",
+  "title": "現代文キーワード 対策問題",
+  "desc": "",
+  "file": "files/2026-kouki-chukan/現代文キーワード_対策問題.pdf",
+  "size": 626477,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "kind": "yoso",
+  "title": "漢字・語彙 対策テスト",
+  "desc": "",
+  "file": "files/2026-kouki-chukan/国語_漢字語彙_対策テスト.pdf",
+  "size": 803566,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "yoso",
+  "title": "進研模試11月 英語 予想問題",
+  "desc": "本物と同じ形式・難化版",
+  "file": "files/2026-11-moshi/進研模試11月_英語_予想問題.pdf",
+  "size": 793574,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "kaisetsu",
+  "title": "進研模試11月 英語 解答・解説",
+  "desc": "",
+  "file": "files/2026-11-moshi/進研模試11月_英語_解答解説.pdf",
+  "size": 1004197,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "math",
+  "kind": "yoso",
+  "title": "進研模試11月 数学 予想問題",
+  "desc": "本物と同じ形式・難化版",
+  "file": "files/2026-11-moshi/進研模試11月_数学_予想問題.pdf",
+  "size": 558766,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "math",
+  "kind": "kaisetsu",
+  "title": "進研模試11月 数学 解答・解説",
+  "desc": "",
+  "file": "files/2026-11-moshi/進研模試11月_数学_解答解説.pdf",
+  "size": 379340,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "koku",
+  "kind": "yoso",
+  "title": "進研模試11月 国語 予想問題",
+  "desc": "本物と同じ形式・難化版",
+  "file": "files/2026-11-moshi/進研模試11月_国語_予想問題.pdf",
+  "size": 1084532,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "koku",
+  "kind": "kaisetsu",
+  "title": "進研模試11月 国語 解答・解説",
+  "desc": "",
+  "file": "files/2026-11-moshi/進研模試11月_国語_解答解説.pdf",
+  "size": 935745,
+  "type": "pdf"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "audio",
+  "title": "リスニング音声（全体）",
+  "desc": "",
+  "file": "files/2026-11-moshi/00_英語リスニング_全体.mp3",
+  "size": 8208909,
+  "type": "audio"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "audio",
+  "title": "リスニング Part 1",
+  "desc": "",
+  "file": "files/2026-11-moshi/01_Part1.mp3",
+  "size": 2642445,
+  "type": "audio"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "audio",
+  "title": "リスニング Part 2",
+  "desc": "",
+  "file": "files/2026-11-moshi/02_Part2.mp3",
+  "size": 2855565,
+  "type": "audio"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "audio",
+  "title": "リスニング Part 3",
+  "desc": "",
+  "file": "files/2026-11-moshi/03_Part3.mp3",
+  "size": 2454669,
+  "type": "audio"
+ },
+ {
+  "exam": "2026-11-moshi",
+  "subject": "eng",
+  "kind": "yoso",
+  "title": "英語 直前5分ドリル",
+  "desc": "",
+  "file": "files/2026-11-moshi/英語_直前5分ドリル.pdf",
+  "size": 281390,
+  "type": "pdf"
+ }
+]
