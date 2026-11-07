@@ -1,0 +1,429 @@
+{
+ "kind": "mc",
+ "exam": "2026-kouki-chukan",
+ "subject": "le",
+ "title": "LEⅠ 後期中間 予想問題（4択・語法選択）",
+ "source": "104回生 後期中間 LEⅠ 予想問題（LE_問題データ.json）の大問1（4択）と大問4（語法選択）。",
+ "questions": [
+  {
+   "id": "le-1-01",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThe old stone bridge is said (　　) about 300 years ago, and it is still in use today.",
+   "choices": [
+    "to build",
+    "to have built",
+    "to have been built",
+    "having been built"
+   ],
+   "answer": 2,
+   "explain": "be said to have been p.p.：①述語（is said）より前の時→完了不定詞 ②橋は「建てられた」側→受け身。完了＋受け身の 2 段階を同時に判断する。It is said that it was built … と同じ意味。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-02",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI regret (　　) harder when I was in high school. Now I can't get into the university I want.",
+   "choices": [
+    "not to study",
+    "not having studied",
+    "having not to study",
+    "to not have studied"
+   ],
+   "answer": 1,
+   "explain": "regret doing＝（過去に）〜したことを後悔する。過去の高校時代のことなので完了動名詞 having studied、否定の not は動名詞の前。regret to do は「残念ながら〜する」。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-03",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nShe seems (　　) her purse somewhere; she has been looking for it all morning.",
+   "choices": [
+    "to have lost",
+    "to lose",
+    "losing",
+    "having lost"
+   ],
+   "answer": 0,
+   "explain": "seem to have done＝（今から見て）〜してしまったらしい。なくしたのは「探している今」より前→完了不定詞。to lose だと「（これから）なくすらしい」。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-04",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI'm sixteen, so I don't like (　　) like a little child by my parents.",
+   "choices": [
+    "treating",
+    "being treated",
+    "to treat",
+    "having treated"
+   ],
+   "answer": 1,
+   "explain": "動名詞の受け身 being p.p.。私が「扱われる」側。I don't like treating … だと「私が扱う」になる。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-05",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThe doctor advised him (　　) so much coffee late at night.",
+   "choices": [
+    "not drink",
+    "not to drink",
+    "to not drinking",
+    "not drinking"
+   ],
+   "answer": 1,
+   "explain": "advise O to do の否定は advise O not to do（not は to の前）。to not drinking は形が誤り。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-06",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThere is no (　　) what he will say next. He is so unpredictable.",
+   "choices": [
+    "knowing",
+    "to know",
+    "known",
+    "know"
+   ],
+   "answer": 0,
+   "explain": "There is no 〜ing＝〜することはできない（＝It is impossible to do）。慣用表現。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-07",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\n(　　) in a great hurry, the report had several careless mistakes.",
+   "choices": [
+    "Writing",
+    "Having written",
+    "Written",
+    "To write"
+   ],
+   "answer": 2,
+   "explain": "分詞構文の主語は主節の主語 the report。報告書は「書かれた」側→過去分詞 Written（Being written の Being が省略された形）。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-08",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\n(　　) all her homework the day before, she had nothing to do on Sunday.",
+   "choices": [
+    "Finishing",
+    "To finish",
+    "Finished",
+    "Having finished"
+   ],
+   "answer": 3,
+   "explain": "前日に終えていた（主節より前）→完了分詞構文 Having finished。Finishing だと「終えながら／終えて（同時）」の意味になり、the day before と合わない。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-09",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nAll things (　　), the school festival was a great success.",
+   "choices": [
+    "considered",
+    "considering",
+    "to consider",
+    "being considered"
+   ],
+   "answer": 0,
+   "explain": "All things considered＝あらゆることを考慮すると（独立分詞構文の慣用表現。Scramble 1078 の補足）。things は「考慮される」側→過去分詞。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-10",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThis problem is not worth (　　) about. Forget it and go to bed.",
+   "choices": [
+    "worry",
+    "to worry",
+    "worrying",
+    "being worried"
+   ],
+   "answer": 2,
+   "explain": "be worth 〜ing＝〜する価値がある。worth の後ろは動名詞（受け身の意味でも能動形）。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-11",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI'd like to have this suit (　　) by Friday because I'm going to a wedding on Saturday.",
+   "choices": [
+    "clean",
+    "cleaning",
+    "to clean",
+    "cleaned"
+   ],
+   "answer": 3,
+   "explain": "have O p.p.：スーツは「クリーニングされる」側。have O 原形（O に〜させる）と区別。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-12",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nWhen it comes to (　　) English, nobody in our class is better than Kenji.",
+   "choices": [
+    "speak",
+    "speaking",
+    "be spoken",
+    "have spoken"
+   ],
+   "answer": 1,
+   "explain": "when it comes to 〜ing（〜のことになると）の to は前置詞→動名詞。look forward to／be used to／object to も同じ。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-13",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nHe was made (　　) for more than two hours at the station in the rain.",
+   "choices": [
+    "wait",
+    "waiting",
+    "to wait",
+    "waited"
+   ],
+   "answer": 2,
+   "explain": "使役動詞 make の受け身：make O 原形 → be made to do。知覚動詞の受け身（be seen to do）と同じく原形が to 不定詞になる。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-14",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI had a hard time (　　) the answer to the last question on the test.",
+   "choices": [
+    "finding",
+    "find",
+    "to find",
+    "found"
+   ],
+   "answer": 0,
+   "explain": "have a hard time (in) 〜ing＝〜するのに苦労する。have trouble [difficulty] (in) 〜ing も同じ。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-15",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\n(　　) a clear day, we could see Mt. Fuji from the rooftop of our school.",
+   "choices": [
+    "Being",
+    "It being",
+    "There being",
+    "It was"
+   ],
+   "answer": 1,
+   "explain": "独立分詞構文：天候を表す it を残す（It was a clear day → It being a clear day）。主節の主語 we とは違うので省略できない。There being は「〜がある」のとき。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-16",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nIt goes without (　　) that health is more important than wealth.",
+   "choices": [
+    "say",
+    "to say",
+    "said",
+    "saying"
+   ],
+   "answer": 3,
+   "explain": "It goes without saying that 〜＝〜は言うまでもない。動名詞の慣用表現。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-17",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThe old woman sat on the bench (　　) by her grandchildren.",
+   "choices": [
+    "surrounding",
+    "to surround",
+    "surrounded",
+    "being surrounding"
+   ],
+   "answer": 2,
+   "explain": "付帯状況を表す分詞：おばあさんは孫に「囲まれている」→過去分詞 surrounded（sat surrounded by …）。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-18",
+   "unit": "準動詞（不定詞・動名詞・分詞）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThe man (　　) to be the best doctor in town turned out to have no license.",
+   "choices": [
+    "believing",
+    "believed",
+    "to believe",
+    "who believed"
+   ],
+   "answer": 1,
+   "explain": "名詞を後ろから修飾する過去分詞：男は「〜だと信じられていた」（be believed to be）→ The man believed to be …（＝who was believed to be）。who believed では「男が信じていた」になり to be が続かない。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-19",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nHer salary is so low that she can barely (　　) these days.",
+   "choices": [
+    "make it",
+    "make believe",
+    "make ends meet",
+    "make do"
+   ],
+   "answer": 2,
+   "explain": "make (both) ends meet＝収支を合わせる（＝live within one's income）〔1109〕。make it（間に合う・成功する）、make believe（ふりをする）、make do（with で「間に合わせる」）。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-20",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI'm sorry, but I can't (　　) to the party on Saturday. I have to work.",
+   "choices": [
+    "make it",
+    "make sense",
+    "make up my mind",
+    "make use"
+   ],
+   "answer": 0,
+   "explain": "make it＝（会合などに）都合をつける・間に合う〔1119〕。make sense〔1084〕、make up one's mind〔1094〕、make use は of が必要〔1053〕。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-21",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nThe professor says that the theory still (　　), even fifty years after it was first proposed.",
+   "choices": [
+    "takes place",
+    "keeps an eye",
+    "gives way",
+    "holds good"
+   ],
+   "answer": 3,
+   "explain": "hold good＝有効である（＝hold true）〔1117〕。take place〔1081〕、keep an eye（on が必要）〔1063〕、give way〔1061〕。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-22",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nJapan is (　　) earthquakes, so buildings must be designed to withstand them.",
+   "choices": [
+    "independent of",
+    "subject to",
+    "true to",
+    "familiar with"
+   ],
+   "answer": 1,
+   "explain": "be subject to〜＝〜の影響を受けやすい〔1143〕。independent of〔1140〕、true to〔1142〕、familiar with〔1125〕。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-23",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nYou should (　　) what you have now instead of complaining about what you don't have.",
+   "choices": [
+    "make the best use of",
+    "take the place of",
+    "get rid of",
+    "make fun of"
+   ],
+   "answer": 0,
+   "explain": "make the best use of〜＝〜を最大限に利用する〔1053〕。take the place of〔1062〕、get rid of〔1112〕、make fun of〔1091〕。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-1-24",
+   "unit": "イディオム（Scramble）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nWhen you judge his work, you must take (　　) the fact that he is still very young.",
+   "choices": [
+    "by surprise",
+    "into account",
+    "by heart",
+    "in mind"
+   ],
+   "answer": 1,
+   "explain": "take A into account＝A を考慮に入れる（＝consider）〔1077〕。A（the fact that …）が長いので take into account A の語順になっている。take A by surprise〔1079〕、learn A by heart〔1073〕、keep A in mind〔1074〕。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-1",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\n(　　) scolded by his teacher many times, he finally stopped coming to school late.",
+   "choices": [
+    "Being",
+    "Having been",
+    "To have been",
+    "Having"
+   ],
+   "answer": 1,
+   "explain": "何度も「叱られた」のは主節より前→完了分詞構文の受け身 Having been p.p.。Being scolded は「叱られながら」で同時。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-2",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI am ashamed of (　　) my promise to you yesterday.",
+   "choices": [
+    "not having kept",
+    "having not keeping",
+    "not to keep",
+    "to not have kept"
+   ],
+   "answer": 0,
+   "explain": "be ashamed of 〜ing。約束を守らなかったのは昨日（過去）→完了動名詞、否定は not having p.p.。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-3",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nI strongly object to (　　) treated like a criminal. I didn't do anything wrong.",
+   "choices": [
+    "be",
+    "being",
+    "have been",
+    "been"
+   ],
+   "answer": 1,
+   "explain": "object to 〜ing の to は前置詞。私が「扱われる」→ being p.p.。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-4",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nWe regret (　　) you that your application has not been accepted.",
+   "choices": [
+    "telling",
+    "to tell",
+    "having told",
+    "to have told"
+   ],
+   "answer": 1,
+   "explain": "regret to do＝残念ながら〜する（これから伝える）。regret doing は「〜したことを後悔する」。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-5",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nIf the printer doesn't work, try (　　) this button. It sometimes helps.",
+   "choices": [
+    "to press",
+    "pressed",
+    "being pressed",
+    "pressing"
+   ],
+   "answer": 3,
+   "explain": "try doing＝試しに〜してみる。try to do は「〜しようと努力する」。",
+   "tag": "予想"
+  },
+  {
+   "id": "le-4-6",
+   "unit": "準動詞（語法選択）",
+   "q": "(　　) に入る最も適当なものを選びなさい。\nHe hurried to the station, only (　　) that the last train had already left.",
+   "choices": [
+    "found",
+    "finding",
+    "to find",
+    "to have found"
+   ],
+   "answer": 2,
+   "explain": "only to do＝（その結果）結局〜しただけだった（結果を表す不定詞）。",
+   "tag": "予想"
+  }
+ ]
+}

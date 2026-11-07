@@ -204,7 +204,7 @@ function runMC(app, title, qs, histKey, back) {
     const q = qs[i];
     app.innerHTML = `<div class="prog"><span>${esc(title)}</span><span>${i + 1} / ${qs.length}・正解 ${score}</span></div><div class="bar" style="margin-bottom:14px"><i style="width:${i / qs.length * 100}%"></i></div>
     <div class="card">${q.unit ? `<div class="muted">${esc(q.unit)}${q.tag ? `<span class="tag">${esc(q.tag)}</span>` : ''}</div>` : ''}${q.passage ? `<div class="passage">${esc(q.passage)}</div>` : ''}<div class="q">${esc(q.q)}</div>
-    <div class="opts">${q.choices.map((c, k) => `<button class="opt" data-k="${k}">${'①②③④⑤⑥'[k]}　${esc(c)}</button>`).join('')}</div><div id="ex"></div></div>`;
+    <div class="opts">${q.choices.map((c, k) => `<button class="opt" data-k="${k}">${'①②③④⑤⑥'[k]}　${esc(String(c).replace(/^\s*[0-9０-９][\.．、)）]\s*/, ''))}</button>`).join('')}</div><div id="ex"></div></div>`;
     app.querySelectorAll('.opt').forEach(b => b.onclick = () => {
       const k = +b.dataset.k; const ok = k === q.answer; if (ok) score++; else wrong.push(q);
       app.querySelectorAll('.opt').forEach(x => { x.disabled = true; if (+x.dataset.k === q.answer) x.classList.add('ok'); });

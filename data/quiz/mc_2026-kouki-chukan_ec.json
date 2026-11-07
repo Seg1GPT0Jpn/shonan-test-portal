@@ -1,0 +1,541 @@
+{
+ "kind": "mc",
+ "exam": "2026-kouki-chukan",
+ "subject": "ec",
+ "title": "ECⅠ 後期中間 予想問題（語彙・内容一致）",
+ "source": "104回生 後期中間 ECⅠ 予想問題の大問Ⅳ〜Ⅶ（語彙の空所補充・内容一致）。リスニングと記述は除外。",
+ "questions": [
+  {
+   "id": "ec-4-1-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) disrupted",
+    "b) distorted",
+    "c) enhanced",
+    "d) refrain",
+    "e) refuse",
+    "f) restrain"
+   ],
+   "answer": 3,
+   "explain": "refrain from 〜ing（〜を控える）。refuse は to do をとり from をとらない。restrain は restrain oneself from 〜ing と目的語が必要。",
+   "tag": "予想",
+   "passage": "A : Under the new school rule, we have to ( 1 ) from using our phones until the last bell rings.\nB : Some of us complained at first, but I have to admit that our lessons are far less ( 2 ) by buzzing notifications now."
+  },
+  {
+   "id": "ec-4-1-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) disrupted",
+    "b) distorted",
+    "c) enhanced",
+    "d) refrain",
+    "e) refuse",
+    "f) restrain"
+   ],
+   "answer": 0,
+   "explain": "disrupt（〈授業など〉を妨げる）。distort（ゆがめる）は lessons と結びつかず、enhanced では「向上させられることが少ない」となり矛盾。",
+   "tag": "予想",
+   "passage": "A : Under the new school rule, we have to ( 1 ) from using our phones until the last bell rings.\nB : Some of us complained at first, but I have to admit that our lessons are far less ( 2 ) by buzzing notifications now."
+  },
+  {
+   "id": "ec-4-2-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) deprive",
+    "b) dispatch",
+    "c) displace",
+    "d) indigenous",
+    "e) resilient",
+    "f) vulnerable"
+   ],
+   "answer": 5,
+   "explain": "vulnerable（傷つきやすい・危険にさらされやすい）。resilient（回復力のある）は逆、indigenous（固有の）は more and more と合わない。",
+   "tag": "予想",
+   "passage": "A : Jane Goodall warned that chimpanzees are becoming more and more ( 1 ) as their forests are cleared for farmland.\nB : Right. Every year, logging and farming ( 2 ) thousands of animals from the homes they have lived in for generations."
+  },
+  {
+   "id": "ec-4-2-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) deprive",
+    "b) dispatch",
+    "c) displace",
+    "d) indigenous",
+    "e) resilient",
+    "f) vulnerable"
+   ],
+   "answer": 2,
+   "explain": "displace A from B（A を B から追い出す）。deprive は deprive A of B で from をとらない。",
+   "tag": "予想",
+   "passage": "A : Jane Goodall warned that chimpanzees are becoming more and more ( 1 ) as their forests are cleared for farmland.\nB : Right. Every year, logging and farming ( 2 ) thousands of animals from the homes they have lived in for generations."
+  },
+  {
+   "id": "ec-4-3-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) backfire",
+    "b) eligible",
+    "c) entitled",
+    "d) flourish",
+    "e) liable",
+    "f) prevail"
+   ],
+   "answer": 4,
+   "explain": "be held liable for 〜（〜の法的責任を負わされる）。eligible for（資格がある）・entitled to（権利がある）は向きが逆。",
+   "tag": "予想",
+   "passage": "A : Under Australia's new law, platforms that fail to keep under-16s off their services can be held ( 1 ) for fines of up to 49.5 million Australian dollars.\nB : Some critics say the law could ( 2 ), though. Teenagers may simply move to smaller apps that nobody is watching."
+  },
+  {
+   "id": "ec-4-3-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) backfire",
+    "b) eligible",
+    "c) entitled",
+    "d) flourish",
+    "e) liable",
+    "f) prevail"
+   ],
+   "answer": 0,
+   "explain": "backfire（裏目に出る）。flourish・prevail は肯定的で though・critics と合わない。",
+   "tag": "予想",
+   "passage": "A : Under Australia's new law, platforms that fail to keep under-16s off their services can be held ( 1 ) for fines of up to 49.5 million Australian dollars.\nB : Some critics say the law could ( 2 ), though. Teenagers may simply move to smaller apps that nobody is watching."
+  },
+  {
+   "id": "ec-4-4-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) demolish",
+    "b) discard",
+    "c) fragile",
+    "d) harsh",
+    "e) humble",
+    "f) retain"
+   ],
+   "answer": 3,
+   "explain": "harsh criticism（厳しい批判）。fragile・humble は criticism と結びつかない。",
+   "tag": "予想",
+   "passage": "A : Despite the ( 1 ) criticism it faced before it opened, the Osaka-Kansai Expo attracted more than 25 million visitors.\nB : Yes. The Grand Ring was so popular that the organizers decided to ( 2 ) about 200 meters of it instead of tearing the whole thing down."
+  },
+  {
+   "id": "ec-4-4-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) demolish",
+    "b) discard",
+    "c) fragile",
+    "d) harsh",
+    "e) humble",
+    "f) retain"
+   ],
+   "answer": 5,
+   "explain": "retain（保持する・残す）。instead of tearing the whole thing down が決め手。demolish・discard は意味が矛盾。",
+   "tag": "予想",
+   "passage": "A : Despite the ( 1 ) criticism it faced before it opened, the Osaka-Kansai Expo attracted more than 25 million visitors.\nB : Yes. The Grand Ring was so popular that the organizers decided to ( 2 ) about 200 meters of it instead of tearing the whole thing down."
+  },
+  {
+   "id": "ec-5-1-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) ascribe",
+    "b) divert",
+    "c) immerse",
+    "d) indispensable",
+    "e) indulge",
+    "f) negligible"
+   ],
+   "answer": 3,
+   "explain": "indispensable（欠かせない）。negligible（無視できるほど小さい）は逆。",
+   "tag": "予想",
+   "passage": "Yuki : Ms. Brown, your advice turned out to be ( 1 ). Since I started leaving my phone in another room, I can ( 2 ) myself in my homework for more than an hour.\nMs. Brown : Wonderful. Studies suggest that even a silent phone lying on the desk can ( 3 ) part of your attention without your noticing it. But please don't ( 4 ) your success to me. It was your own effort that made the difference."
+  },
+  {
+   "id": "ec-5-1-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) ascribe",
+    "b) divert",
+    "c) immerse",
+    "d) indispensable",
+    "e) indulge",
+    "f) negligible"
+   ],
+   "answer": 2,
+   "explain": "immerse oneself in 〜（〜に没頭する）。myself in が決め手。",
+   "tag": "予想",
+   "passage": "Yuki : Ms. Brown, your advice turned out to be ( 1 ). Since I started leaving my phone in another room, I can ( 2 ) myself in my homework for more than an hour.\nMs. Brown : Wonderful. Studies suggest that even a silent phone lying on the desk can ( 3 ) part of your attention without your noticing it. But please don't ( 4 ) your success to me. It was your own effort that made the difference."
+  },
+  {
+   "id": "ec-5-1-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) ascribe",
+    "b) divert",
+    "c) immerse",
+    "d) indispensable",
+    "e) indulge",
+    "f) negligible"
+   ],
+   "answer": 1,
+   "explain": "divert（〈注意〉をそらす）。divert part of your attention。",
+   "tag": "予想",
+   "passage": "Yuki : Ms. Brown, your advice turned out to be ( 1 ). Since I started leaving my phone in another room, I can ( 2 ) myself in my homework for more than an hour.\nMs. Brown : Wonderful. Studies suggest that even a silent phone lying on the desk can ( 3 ) part of your attention without your noticing it. But please don't ( 4 ) your success to me. It was your own effort that made the difference."
+  },
+  {
+   "id": "ec-5-1-4",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 4 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) ascribe",
+    "b) divert",
+    "c) immerse",
+    "d) indispensable",
+    "e) indulge",
+    "f) negligible"
+   ],
+   "answer": 0,
+   "explain": "ascribe A to B（A を B のおかげだと考える）。attribute A to B と同じ形。",
+   "tag": "予想",
+   "passage": "Yuki : Ms. Brown, your advice turned out to be ( 1 ). Since I started leaving my phone in another room, I can ( 2 ) myself in my homework for more than an hour.\nMs. Brown : Wonderful. Studies suggest that even a silent phone lying on the desk can ( 3 ) part of your attention without your noticing it. But please don't ( 4 ) your success to me. It was your own effort that made the difference."
+  },
+  {
+   "id": "ec-5-2-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) accumulate",
+    "b) bunch",
+    "c) embark",
+    "d) fraction",
+    "e) transform",
+    "f) undertake"
+   ],
+   "answer": 5,
+   "explain": "undertake（〈仕事・事業〉を引き受ける）。他動詞で three projects を直接とる。",
+   "tag": "予想",
+   "passage": "Tom : I've decided to start a Roots & Shoots group at our school. Each group has to ( 1 ) three projects: one to help people, one to help animals, and one to help the environment.\nLisa : That sounds great, Tom. But most students are busy with club activities and cram school. I'm afraid that only a ( 2 ) of them will join.\nTom : Maybe, but Jane Goodall believed that young people could ( 3 ) the world. If a million people make small changes, those changes will ( 4 ) and finally make a big difference."
+  },
+  {
+   "id": "ec-5-2-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) accumulate",
+    "b) bunch",
+    "c) embark",
+    "d) fraction",
+    "e) transform",
+    "f) undertake"
+   ],
+   "answer": 3,
+   "explain": "only a fraction of 〜（〜のごく一部）。",
+   "tag": "予想",
+   "passage": "Tom : I've decided to start a Roots & Shoots group at our school. Each group has to ( 1 ) three projects: one to help people, one to help animals, and one to help the environment.\nLisa : That sounds great, Tom. But most students are busy with club activities and cram school. I'm afraid that only a ( 2 ) of them will join.\nTom : Maybe, but Jane Goodall believed that young people could ( 3 ) the world. If a million people make small changes, those changes will ( 4 ) and finally make a big difference."
+  },
+  {
+   "id": "ec-5-2-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) accumulate",
+    "b) bunch",
+    "c) embark",
+    "d) fraction",
+    "e) transform",
+    "f) undertake"
+   ],
+   "answer": 4,
+   "explain": "transform（大きく変える）。",
+   "tag": "予想",
+   "passage": "Tom : I've decided to start a Roots & Shoots group at our school. Each group has to ( 1 ) three projects: one to help people, one to help animals, and one to help the environment.\nLisa : That sounds great, Tom. But most students are busy with club activities and cram school. I'm afraid that only a ( 2 ) of them will join.\nTom : Maybe, but Jane Goodall believed that young people could ( 3 ) the world. If a million people make small changes, those changes will ( 4 ) and finally make a big difference."
+  },
+  {
+   "id": "ec-5-2-4",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 4 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) accumulate",
+    "b) bunch",
+    "c) embark",
+    "d) fraction",
+    "e) transform",
+    "f) undertake"
+   ],
+   "answer": 0,
+   "explain": "accumulate（積み重なる）：自動詞。finally make a big difference との因果。",
+   "tag": "予想",
+   "passage": "Tom : I've decided to start a Roots & Shoots group at our school. Each group has to ( 1 ) three projects: one to help people, one to help animals, and one to help the environment.\nLisa : That sounds great, Tom. But most students are busy with club activities and cram school. I'm afraid that only a ( 2 ) of them will join.\nTom : Maybe, but Jane Goodall believed that young people could ( 3 ) the world. If a million people make small changes, those changes will ( 4 ) and finally make a big difference."
+  },
+  {
+   "id": "ec-6-1-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) approximately",
+    "b) compels",
+    "c) plunged",
+    "d) soared",
+    "e) urges",
+    "f) virtually"
+   ],
+   "answer": 3,
+   "explain": "soared（急上昇した）。plunged（急落した）は逆。",
+   "tag": "予想",
+   "passage": "A : Smartphone use in Japan ( 1 ) after 2011. By 2018, ( 2 ) 65 percent of the population owned one.\nB : That's why Toyoake City in Aichi passed an ordinance which ( 3 ) residents to limit their smartphone use outside work or school to about two hours a day.\nA : It isn't compulsory, though. There is no penalty even if you ignore it."
+  },
+  {
+   "id": "ec-6-1-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) approximately",
+    "b) compels",
+    "c) plunged",
+    "d) soared",
+    "e) urges",
+    "f) virtually"
+   ],
+   "answer": 0,
+   "explain": "approximately（約）。",
+   "tag": "予想",
+   "passage": "A : Smartphone use in Japan ( 1 ) after 2011. By 2018, ( 2 ) 65 percent of the population owned one.\nB : That's why Toyoake City in Aichi passed an ordinance which ( 3 ) residents to limit their smartphone use outside work or school to about two hours a day.\nA : It isn't compulsory, though. There is no penalty even if you ignore it."
+  },
+  {
+   "id": "ec-6-1-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) approximately",
+    "b) compels",
+    "c) plunged",
+    "d) soared",
+    "e) urges",
+    "f) virtually"
+   ],
+   "answer": 4,
+   "explain": "urge A to do（A に〜するよう強く促す）。強制ではない（compulsory ではない）ので compels は不可。",
+   "tag": "予想",
+   "passage": "A : Smartphone use in Japan ( 1 ) after 2011. By 2018, ( 2 ) 65 percent of the population owned one.\nB : That's why Toyoake City in Aichi passed an ordinance which ( 3 ) residents to limit their smartphone use outside work or school to about two hours a day.\nA : It isn't compulsory, though. There is no penalty even if you ignore it."
+  },
+  {
+   "id": "ec-6-2-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) betrayed",
+    "b) compassion",
+    "c) contempt",
+    "d) namely",
+    "e) nevertheless",
+    "f) nurtured"
+   ],
+   "answer": 4,
+   "explain": "nevertheless（それにもかかわらず）：「平和的」⇔「襲う」の逆接。",
+   "tag": "予想",
+   "passage": "Chimpanzees are often described as peaceful animals. ( 1 ), the males sometimes attack chimps from other communities to protect their territories. On the other hand, a twelve-year-old male called Spindle once ( 2 ) a young orphan named Mel, sharing his nest and food with him. This story shows that chimps, too, possess ( 3 ) for others."
+  },
+  {
+   "id": "ec-6-2-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) betrayed",
+    "b) compassion",
+    "c) contempt",
+    "d) namely",
+    "e) nevertheless",
+    "f) nurtured"
+   ],
+   "answer": 5,
+   "explain": "nurtured（育てた）。betrayed は「寝床や食べ物を分けた」と矛盾。",
+   "tag": "予想",
+   "passage": "Chimpanzees are often described as peaceful animals. ( 1 ), the males sometimes attack chimps from other communities to protect their territories. On the other hand, a twelve-year-old male called Spindle once ( 2 ) a young orphan named Mel, sharing his nest and food with him. This story shows that chimps, too, possess ( 3 ) for others."
+  },
+  {
+   "id": "ec-6-2-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) betrayed",
+    "b) compassion",
+    "c) contempt",
+    "d) namely",
+    "e) nevertheless",
+    "f) nurtured"
+   ],
+   "answer": 1,
+   "explain": "compassion for others（他者への思いやり）。contempt（軽蔑）は逆。",
+   "tag": "予想",
+   "passage": "Chimpanzees are often described as peaceful animals. ( 1 ), the males sometimes attack chimps from other communities to protect their territories. On the other hand, a twelve-year-old male called Spindle once ( 2 ) a young orphan named Mel, sharing his nest and food with him. This story shows that chimps, too, possess ( 3 ) for others."
+  },
+  {
+   "id": "ec-6-3-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) diminished",
+    "b) illustrates",
+    "c) multiplied",
+    "d) namely",
+    "e) refutes",
+    "f) thus"
+   ],
+   "answer": 5,
+   "explain": "thus（その結果）：因果関係。namely（すなわち）は因果を表さない。",
+   "tag": "予想",
+   "passage": "In England, farmers killed the rabbits that were destroying their grain. ( 1 ), foxes did not have enough to eat and began killing the farmers' chickens. When the foxes were killed, rats ( 2 ) rapidly and ate just as much grain as the rabbits had eaten. This story ( 3 ) how everything in nature is connected."
+  },
+  {
+   "id": "ec-6-3-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) diminished",
+    "b) illustrates",
+    "c) multiplied",
+    "d) namely",
+    "e) refutes",
+    "f) thus"
+   ],
+   "answer": 2,
+   "explain": "multiplied（増えた）。diminished（減った）は矛盾。",
+   "tag": "予想",
+   "passage": "In England, farmers killed the rabbits that were destroying their grain. ( 1 ), foxes did not have enough to eat and began killing the farmers' chickens. When the foxes were killed, rats ( 2 ) rapidly and ate just as much grain as the rabbits had eaten. This story ( 3 ) how everything in nature is connected."
+  },
+  {
+   "id": "ec-6-3-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) diminished",
+    "b) illustrates",
+    "c) multiplied",
+    "d) namely",
+    "e) refutes",
+    "f) thus"
+   ],
+   "answer": 1,
+   "explain": "illustrates how 〜（〜を例で示す）。refutes（反論する）は逆。",
+   "tag": "予想",
+   "passage": "In England, farmers killed the rabbits that were destroying their grain. ( 1 ), foxes did not have enough to eat and began killing the farmers' chickens. When the foxes were killed, rats ( 2 ) rapidly and ate just as much grain as the rabbits had eaten. This story ( 3 ) how everything in nature is connected."
+  },
+  {
+   "id": "ec-6-4-1",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 1 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) duplicate",
+    "b) enhance",
+    "c) generate",
+    "d) hence",
+    "e) nevertheless",
+    "f) undermine"
+   ],
+   "answer": 2,
+   "explain": "generate（生み出す）。duplicate（複製する）は文脈に合わない。",
+   "tag": "予想",
+   "passage": "Generative AI can now ( 1 ) a whole essay in a few seconds. ( 2 ), some schools require students to submit their notes as well as their final essays. Critics argue that relying on AI too much may ( 3 ) our ability to think independently."
+  },
+  {
+   "id": "ec-6-4-2",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 2 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) duplicate",
+    "b) enhance",
+    "c) generate",
+    "d) hence",
+    "e) nevertheless",
+    "f) undermine"
+   ],
+   "answer": 3,
+   "explain": "hence（だから）：因果。nevertheless は逆接で論理が逆。",
+   "tag": "予想",
+   "passage": "Generative AI can now ( 1 ) a whole essay in a few seconds. ( 2 ), some schools require students to submit their notes as well as their final essays. Critics argue that relying on AI too much may ( 3 ) our ability to think independently."
+  },
+  {
+   "id": "ec-6-4-3",
+   "unit": "語彙（LEAP 1101〜2100）",
+   "q": "空所 ( 3 ) に入る最も適当な語を選びなさい。",
+   "choices": [
+    "a) duplicate",
+    "b) enhance",
+    "c) generate",
+    "d) hence",
+    "e) nevertheless",
+    "f) undermine"
+   ],
+   "answer": 5,
+   "explain": "undermine（徐々に弱める）。enhance（高める）は Critics argue と合わない。",
+   "tag": "予想",
+   "passage": "Generative AI can now ( 1 ) a whole essay in a few seconds. ( 2 ), some schools require students to submit their notes as well as their final essays. Critics argue that relying on AI too much may ( 3 ) our ability to think independently."
+  },
+  {
+   "id": "ec-7-1",
+   "unit": "内容一致（Comprehension）",
+   "q": "本文の内容に合うものを1つ選びなさい。",
+   "choices": [
+    "a) Leakey's remark was intended to suggest that chimpanzees deserved the same legal status as humans.",
+    "b) Before 1960, the ability to make tools was widely regarded as a trait found only in human beings.",
+    "c) It was Goodall herself who first proposed that the definition of \"man\" should be changed."
+   ],
+   "answer": 1,
+   "explain": "b は「many scientists believed that making and using tools was what set human beings apart」の言い換え。a は本文が否定、c は定義の変更を口にしたのは Leakey（人物のすり替え）。",
+   "tag": "予想",
+   "passage": "In 1960, a young Jane Goodall watched a chimpanzee she had named David Greybeard strip the leaves off a twig, push it into a termite mound, and pull it out covered with insects. At the time, many scientists believed that making and using tools was what set human beings apart from all other animals. When Goodall reported what she had seen, her mentor Louis Leakey famously replied, \"Now we must redefine 'tool,' redefine 'man,' or accept chimpanzees as humans.\" Leakey was not, of course, proposing that chimps be given human rights; he was pointing out that a definition many people had taken for granted no longer held."
+  },
+  {
+   "id": "ec-7-2",
+   "unit": "内容一致（Comprehension）",
+   "q": "対話の内容に合うものを1つ選びなさい。",
+   "choices": [
+    "a) Mika suspects that the videos are made endless so that users will not notice a hidden fee.",
+    "b) Ryan argues that attention differs from oil and water in that it can never run out.",
+    "c) In Ryan's view, it is in a sense the users themselves that social media companies are selling."
+   ],
+   "answer": 2,
+   "explain": "c は \"If you're not paying for the product, you are the product.\" の言い換え。a の hidden fee は本文にない。b は just as easy to exhaust と逆。",
+   "tag": "予想",
+   "passage": "Mika : I don't understand why social media is free. Those companies make billions of dollars every year.\nRyan : There's a saying: \"If you're not paying for the product, you are the product.\" They sell advertisers our attention — every second we spend scrolling is something they can sell.\nMika : So the longer I stay on the app, the more money they make. No wonder the videos never seem to end.\nRyan : Exactly. And that's why some people say our attention has become a natural resource, just like oil or water — and just as easy to exhaust."
+  },
+  {
+   "id": "ec-7-3",
+   "unit": "内容一致（Comprehension）",
+   "q": "本文の内容に合うものを1つ選びなさい。",
+   "choices": [
+    "a) Thoreau used the expression in connection with a preference for simplicity of which he disapproved.",
+    "b) The publisher chose the phrase mainly because it had only recently been coined.",
+    "c) Young people tend to avoid the term because they regard it as an insult."
+   ],
+   "answer": 0,
+   "explain": "a は「criticizing his society for valuing simple ideas over complex ones」の言い換え。b は the expression is not new と矛盾。c は with a sense of humor と逆。",
+   "tag": "予想",
+   "passage": "In 2024, Oxford University Press chose \"brain rot\" as its Word of the Year. The phrase describes the supposed decline of a person's mental state that comes from consuming too much trivial online content. Interestingly, the expression is not new: the American writer Henry David Thoreau used it in 1854, criticizing his society for valuing simple ideas over complex ones. What has changed, according to the publisher, is how often people now use the term — and the fact that young people themselves use it, often with a sense of humor, to describe their own habits."
+  },
+  {
+   "id": "ec-7-4",
+   "unit": "内容一致（Comprehension）",
+   "q": "対話の内容に合うものを1つ選びなさい。",
+   "choices": [
+    "a) The toads were introduced because Australia's native predators were unable to eat them.",
+    "b) Although the toads did not multiply as much as expected, they kept the beetles under control.",
+    "c) Hiro is reminded of a case in which human action against one species led to unforeseen trouble."
+   ],
+   "answer": 2,
+   "explain": "c は「rabbits and foxes の話のようだ」＝人間が1つの種に手を加えて予期せぬ問題が起きた例を連想している。a は持ち込んだ理由のすり替え、b は bred so quickly と逆。",
+   "tag": "予想",
+   "passage": "Ms. Sato : In 1935, about a hundred cane toads were brought from Hawaii to Australia to eat the beetles that were damaging sugar cane.\nHiro : Did it work?\nMs. Sato : Not at all. The toads hardly ate the beetles, but they bred so quickly that there are now estimated to be more than 200 million of them. Because they are poisonous, many native predators that try to eat them die.\nHiro : That sounds like the story of the rabbits and foxes in Jane Goodall's interview."
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+[
+ {
+  "file": "mc_2026-kouki-chukan_bio.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "bio",
+  "title": "生物基礎 後期中間 予想問題（選択式）",
+  "count": 20
+ },
+ {
+  "file": "mc_2026-kouki-chukan_chem.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "chem",
+  "title": "化学基礎 後期中間 予想問題（選択式・正誤）",
+  "count": 15
+ },
+ {
+  "file": "mc_2026-kouki-chukan_ec.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "ec",
+  "title": "ECⅠ 後期中間 予想問題（語彙・内容一致）",
+  "count": 32
+ },
+ {
+  "file": "mc_2026-kouki-chukan_gendai.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "title": "現代の国語 後期中間 予想問題（選択式）",
+  "count": 13
+ },
+ {
+  "file": "mc_2026-kouki-chukan_gengo.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "gengo",
+  "title": "言語文化 後期中間 予想問題（選択式）",
+  "count": 18
+ },
+ {
+  "file": "mc_2026-kouki-chukan_info.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "info",
+  "title": "情報Ⅰ 後期中間 予想問題（選択式）",
+  "count": 22
+ },
+ {
+  "file": "mc_2026-kouki-chukan_kokyo.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "kokyo",
+  "title": "公共 後期中間 予想問題（選択式）",
+  "count": 31
+ },
+ {
+  "file": "mc_2026-kouki-chukan_le.json",
+  "kind": "mc",
+  "exam": "2026-kouki-chukan",
+  "subject": "le",
+  "title": "LEⅠ 後期中間 予想問題（4択・語法選択）",
+  "count": 30
+ },
+ {
+  "file": "term_2026-kouki-chukan_bio.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "bio",
+  "title": "生物基礎 後期中間 用語の一問一答",
+  "count": 43
+ },
+ {
+  "file": "term_2026-kouki-chukan_chem.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "chem",
+  "title": "化学基礎 後期中間 用語の一問一答",
+  "count": 19
+ },
+ {
+  "file": "term_2026-kouki-chukan_gendai.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "gendai",
+  "title": "現代の国語 後期中間 キーワード・文学史",
+  "count": 29
+ },
+ {
+  "file": "term_2026-kouki-chukan_gengo.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "gengo",
+  "title": "言語文化 後期中間 古文単語・故事成語・句法",
+  "count": 39
+ },
+ {
+  "file": "term_2026-kouki-chukan_info.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "info",
+  "title": "情報Ⅰ 後期中間 用語の一問一答",
+  "count": 48
+ },
+ {
+  "file": "term_2026-kouki-chukan_kokyo.json",
+  "kind": "term",
+  "exam": "2026-kouki-chukan",
+  "subject": "kokyo",
+  "title": "公共 後期中間 用語の一問一答",
+  "count": 45
+ }
+]
