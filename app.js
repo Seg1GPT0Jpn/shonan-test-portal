@@ -306,85 +306,120 @@ function chartSVG(s) {
   const mx = Math.max(...s.bins.map(b => b.count), 1), w = 300, h = 120, bw = w / s.bins.length;
   return `<svg viewBox="0 0 ${w} ${h + 18}" style="width:100%;max-width:420px">${s.bins.map((b, i) => `<rect x="${i * bw + 2}" y="${h - b.count / mx * h}" width="${bw - 4}" height="${b.count / mx * h}" rx="2" fill="var(--pri2)"><title>${b.from}〜${b.to}点：${b.count}人</title></rect>`).join('')}<line x1="0" y1="${h}" x2="${w}" y2="${h}" stroke="var(--line)"/>${s.bins.filter((_, i) => i % 2 === 0).map((b, j) => `<text x="${j * 2 * bw + 2}" y="${h + 13}" font-size="9" fill="var(--sub)">${b.from}</text>`).join('')}</svg>`;
 }
+// 点数は「提出コード」にして管理者へ送り、管理者が集計ファイル（data/ranking/<試験>.json）を公開する。
+// サーバー・外部サービスは使わない。出席番号は提出コードの中だけにあり、公開ファイルには入れない。
+const CODE_HEAD = 'STP1-';
+function encCode(o) { const b = new TextEncoder().encode(JSON.stringify(o)); let s = ''; b.forEach(x => s += String.fromCharCode(x)); return CODE_HEAD + btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+function decCode(c) {
+  try {
+    const s = atob(c.slice(CODE_HEAD.length).replace(/-/g, '+').replace(/_/g, '/'));
+    const o = JSON.parse(new TextDecoder().decode(Uint8Array.from(s, ch => ch.charCodeAt(0))));
+    if (!o || typeof o.e !== 'string' || !/^\d{4}$/.test(o.n) || typeof o.k !== 'string' || typeof o.s !== 'object') return null;
+    const scores = {}; for (const [k, v] of Object.entries(o.s)) { const name = SUBJ[+k]; if (name && Number.isFinite(v) && v >= 0 && v <= 100) scores[name] = v; }
+    return { exam: o.e, number: o.n, nickname: o.k.slice(0, 20), public: !!o.p, scores, at: o.t || 0 };
+  } catch { return null; }
+}
+const totalOf = sc => SUBJ.every(s => s in sc) ? SUBJ.reduce((a, s) => a + sc[s], 0) : null;
+async function rankingFile(exam) { try { const r = await fetch(`data/ranking/${exam}.json`, { cache: 'no-store' }); return r.ok ? await r.json() : null; } catch { return null; } }
+function download(name, text) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); }
+
 async function ranking(app, [tab]) {
   const exams = await data('exams.json');
-  const FB = await window.FB.ready;
-  tab = tab || (FB.user ? 'submit' : 'dist');
-  const head = `<h1>みんなの成績</h1><div class="chips">${[['dist', '点数の分布（公開）'], ['submit', '点数を提出'], ['board', '順位表（湘南生限定）']].map(([k, t]) => `<a class="chip ${k === tab ? 'on' : ''}" style="text-decoration:none" href="#/ranking/${k}">${t}</a>`).join('')}</div>`;
-  if (!FB.configured) { app.innerHTML = head + '<div class="card muted">成績機能は準備中です（データベースの設定がまだです）。</div>'; return; }
+  tab = tab || 'board';
   const exSel = store.get('rankExam', exams[0].id);
-  const examChips = cur => `<div class="row" style="margin-bottom:8px"><span class="muted">試験</span><select id="rex">${exams.map(e => `<option value="${e.id}" ${e.id === cur ? 'selected' : ''}>${esc(e.name)}</option>`).join('')}</select></div>`;
+  const exName = id => (exams.find(e => e.id === id) || {}).name || id;
+  const head = `<h1>みんなの成績</h1><div class="chips">${[['board', '順位表'], ['dist', '点数の分布'], ['submit', '点数を提出']].map(([k, t]) => `<a class="chip ${k === tab ? 'on' : ''}" style="text-decoration:none" href="#/ranking/${k}">${t}</a>`).join('')}</div>`;
+  const examSel = `<div class="row" style="margin-bottom:8px"><span class="muted">試験</span><select id="rex">${exams.map(e => `<option value="${e.id}" ${e.id === exSel ? 'selected' : ''}>${esc(e.name)}</option>`).join('')}</select></div>`;
   const bindEx = () => { const s = $('#rex'); if (s) s.onchange = () => { store.set('rankExam', s.value); ranking(app, [tab]); }; };
-  const loginBox = () => `<div class="card"><h3 style="margin-top:0">学校のメールアドレスでログイン</h3>
-    <p class="muted">学校のメールアドレス（${FB.SCHOOL_HINT}）にログイン用のリンクを送ります。パスワードはいりません。届いたメールのリンクを<b>この端末のこのブラウザ</b>で開くとログインできます。</p>
-    <div class="row"><input type="text" id="lem" placeholder="例：12345678@gl.pen-kanagawa.ed.jp" style="flex:1;min-width:220px" inputmode="email" autocomplete="email"><button class="btn pri" id="lsd">リンクを送る</button></div><div id="lmsg" class="muted" style="margin-top:8px"></div></div>`;
-  const bindLogin = () => { const b = $('#lsd'); if (!b) return; b.onclick = async () => { b.disabled = true; try { await FB.sendLink($('#lem').value.trim()); $('#lmsg').innerHTML = 'メールを送りました。学校のメールを開いてリンクを押してください（迷惑メールに入ることがあります）。'; } catch (e) { $('#lmsg').textContent = e.message; } b.disabled = false; }; };
-  const userBar = () => FB.user ? `<p class="muted">ログイン中：${esc(FB.user.email)}　<button class="btn sm" id="lout">ログアウト</button></p>` : '';
-  const bindUser = () => { const b = $('#lout'); if (b) b.onclick = async () => { await FB.signOut(); ranking(app, ['dist']); }; };
 
+  if (tab === 'submit') {
+    const mine = store.get('myScore:' + exSel, { nickname: store.get('nick', ''), number: '', public: true, scores: {} });
+    app.innerHTML = head + `<div class="card">${examSel}
+    <p class="muted" style="margin-top:0">点数を入れて「提出コードを作る」を押し、できたコードを<b>集計係</b>にLINEなどで送ってください。集計係がまとめて順位表と分布を更新します（反映まで少し時間がかかります）。</p>
+    <div class="row"><label style="min-width:9em">ニックネーム</label><input type="text" id="fn" maxlength="20" value="${esc(mine.nickname)}" placeholder="順位表に載る名前（本名は避けて）" style="flex:1"></div>
+    <div class="row" style="margin-top:8px"><label style="min-width:9em">出席番号（4桁）</label><input type="text" id="fno" maxlength="4" inputmode="numeric" value="${esc(mine.number)}" placeholder="例：1104" style="width:110px"><span class="muted">集計係だけが見ます。順位表にも分布にも出しません</span></div>
+    <h3>点数（0〜100、受けていない・言いたくない科目は空欄）</h3>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${SUBJ.map(s => `<label class="row" style="justify-content:space-between"><span>${s}</span><input type="number" min="0" max="100" data-s="${s}" value="${mine.scores[s] ?? ''}" style="width:80px"></label>`).join('')}</div>
+    <label class="chk" style="border:0"><input type="checkbox" id="fp" ${mine.public ? 'checked' : ''}><span>順位表にニックネームで載せる（チェックを外すと、誰の点数か分からない分布の集計だけに使います）</span></label>
+    <label class="chk" style="border:0"><input type="checkbox" id="fa"><span>この点数が、順位表（載せる場合・このサイトで誰でも見られます）と分布の集計に使われることに同意します。直したいときは作り直したコードを送れば、新しいほうで上書きされます。消したいときは集計係に伝えてください。</span></label>
+    <div class="row"><button class="btn pri" id="fsv">提出コードを作る</button><span id="fmsg" class="muted"></span></div>
+    <div id="fout" style="display:none;margin-top:10px"><textarea id="fcode" readonly rows="3" style="width:100%;font:12px monospace;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--chip);color:var(--ink)"></textarea>
+    <div class="row" style="margin-top:6px"><button class="btn" id="fcp">コピー</button><a class="btn" id="fline" target="_blank" rel="noopener">LINEで送る</a></div></div></div>
+    <p class="muted" style="margin-top:12px">集計係の人は <a href="#/ranking/admin">集計ページ</a> を使います。</p>`;
+    bindEx();
+    $('#fsv').onclick = () => {
+      const nick = $('#fn').value.trim(), no = $('#fno').value.trim();
+      if (!nick) return $('#fmsg').textContent = 'ニックネームを入れてください。';
+      if (!/^\d{4}$/.test(no)) return $('#fmsg').textContent = '出席番号は4桁の数字で入れてください。';
+      if (!$('#fa').checked) return $('#fmsg').textContent = '同意にチェックしてください。';
+      const scores = {}, s = {}; let bad = false;
+      app.querySelectorAll('[data-s]').forEach(i => { if (i.value === '') return; const v = +i.value; if (!(v >= 0 && v <= 100)) bad = true; else { scores[i.dataset.s] = v; s[SUBJ.indexOf(i.dataset.s)] = v; } });
+      if (bad) return $('#fmsg').textContent = '点数は0〜100で入れてください。';
+      if (!Object.keys(scores).length) return $('#fmsg').textContent = '点数を1科目以上入れてください。';
+      store.set('myScore:' + exSel, { nickname: nick, number: no, public: $('#fp').checked, scores }); store.set('nick', nick);
+      const code = encCode({ e: exSel, n: no, k: nick, p: $('#fp').checked ? 1 : 0, s, t: Date.now() });
+      $('#fcode').value = code; $('#fout').style.display = 'block'; $('#fmsg').textContent = 'コードができました。集計係に送ってください。';
+      $('#fline').href = 'https://line.me/R/share?text=' + encodeURIComponent(`${exName(exSel)}の点数です\n${code}`);
+    };
+    $('#fcp').onclick = async () => { try { await navigator.clipboard.writeText($('#fcode').value); $('#fmsg').textContent = 'コピーしました。'; } catch { $('#fcode').select(); $('#fmsg').textContent = '選択したので、長押しでコピーしてください。'; } };
+    return;
+  }
+
+  if (tab === 'admin') {
+    const saved = store.get('adminCodes', '');
+    app.innerHTML = head + `<div class="card">${examSel}
+    <h3 style="margin-top:0">集計係用ページ</h3>
+    <p class="muted">みんなから届いた提出コード（<code>${CODE_HEAD}</code>で始まる文字列）を下にまとめて貼り付けてください。LINEのトークをそのまま貼っても、コードだけを読み取ります。同じ出席番号のコードが複数あるときは、新しく作られたほうを使います。<b>貼り付けた内容はこの端末の中だけで処理され、どこにも送信されません。</b></p>
+    <textarea id="acodes" rows="8" style="width:100%;font:12px monospace;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)" placeholder="ここに貼り付け">${esc(saved)}</textarea>
+    <div class="row" style="margin-top:6px"><button class="btn pri" id="ago">読み取る</button><button class="btn" id="aclr">貼り付けた内容を消す</button><span id="amsg" class="muted"></span></div>
+    <div id="aout"></div></div>`;
+    bindEx();
+    $('#aclr').onclick = () => { if (!confirm('貼り付けた内容をこの端末から消しますか？')) return; store.set('adminCodes', ''); $('#acodes').value = ''; $('#aout').innerHTML = ''; };
+    $('#ago').onclick = () => {
+      const text = $('#acodes').value; store.set('adminCodes', text);
+      const found = (text.match(/STP1-[A-Za-z0-9_-]+/g) || []).map(decCode);
+      const bad = found.filter(x => !x).length, ok = found.filter(x => x && x.exam === exSel), other = found.filter(x => x && x.exam !== exSel).length;
+      const by = new Map(); for (const x of ok) { const p = by.get(x.number); if (!p || x.at >= p.at) by.set(x.number, x); }
+      const list = [...by.values()].sort((a, b) => a.number.localeCompare(b.number));
+      const subjects = [];
+      for (const s of SUBJ) { const xs = list.map(r => r.scores[s]).filter(v => typeof v === 'number'); if (xs.length >= MIN_N) subjects.push({ subject: s, ...statsOf(xs, 100, 10) }); }
+      const ts = list.map(r => totalOf(r.scores)).filter(v => typeof v === 'number'); if (ts.length >= MIN_N) subjects.push({ subject: '合計', ...statsOf(ts, 1100, 100) });
+      const pub = { exam: exSel, updated: new Date().toISOString().slice(0, 10), count: list.length, entries: list.filter(r => r.public).map(r => ({ nickname: r.nickname, scores: r.scores, total: totalOf(r.scores) })), subjects };
+      $('#amsg').textContent = `読み取り ${ok.length} 件 → ${list.length} 人分` + (other ? `（別の試験のコード ${other} 件は除外）` : '') + (bad ? `（読めないコード ${bad} 件）` : '');
+      $('#aout').innerHTML = `<div class="scroll" style="margin-top:10px"><table class="tb"><tr><th>出席番号</th><th>ニックネーム</th><th>掲載</th><th>科目数</th><th>合計</th></tr>${list.map(r => `<tr><td>${esc(r.number)}</td><td>${esc(r.nickname)}</td><td>${r.public ? '載せる' : '載せない'}</td><td>${Object.keys(r.scores).length}</td><td>${totalOf(r.scores) ?? '-'}</td></tr>`).join('')}</table></div>
+      <p class="muted">出席番号はこの表（この端末の中）にだけ表示され、公開用ファイルには入りません。公開用ファイルには、掲載に同意した人のニックネームと点数、全員分から計算した分布（${MIN_N}人以上の科目だけ）が入ります。</p>
+      <div class="row"><button class="btn pri" id="adl">公開用ファイルを保存（${esc(exSel)}.json）</button></div>
+      <p class="muted">保存したファイルを、GitHub のリポジトリの <code>data/ranking/</code> フォルダにアップロードする（同じ名前のファイルは置き換え）と、数分で順位表と分布に反映されます。アップロードが難しければ、ファイルを Claude に渡しても反映できます。</p>`;
+      $('#adl').onclick = () => download(exSel + '.json', JSON.stringify(pub, null, 1));
+    };
+    if (saved) $('#ago').click();
+    return;
+  }
+
+  const f = await rankingFile(exSel);
   if (tab === 'dist') {
-    let st = []; try { st = await FB.readStats(); } catch { }
-    const ex = st.find(x => x.exam === exSel) || st[0];
-    app.innerHTML = head + userBar() + (!ex ? `<div class="card muted">まだ公開できる集計がありません。各科目の提出者が ${MIN_N} 人以上になったら、平均と分布をここに表示します。</div>` : `
-    <p class="muted">${esc((exams.find(e => e.id === ex.exam) || {}).name || ex.exam)}・更新 ${esc(ex.updated || '')}・誰の点数かは分からない形（人数・平均・標準偏差・10点刻みの人数）だけを公開しています。提出者が ${MIN_N} 人未満の科目は表示しません。</p>
-    ${st.length > 1 ? `<div class="chips">${st.map(x => `<button class="chip ${x === ex ? 'on' : ''}" data-se="${x.exam}">${esc((exams.find(e => e.id === x.exam) || {}).name || x.exam)}</button>`).join('')}</div>` : ''}
-    <div class="card"><h3 style="margin-top:0">自分の位置を調べる</h3><div class="row"><select id="rs">${ex.subjects.map((s, i) => `<option value="${i}">${esc(s.subject)}</option>`).join('')}</select><input type="number" id="rx" placeholder="自分の点数" style="width:120px"><button class="btn pri" id="rg">調べる</button></div><div id="rr" class="exp" style="display:none"></div><p class="muted" style="margin:8px 0 0">入力した点数は送信されません（この画面の中だけで計算します）。</p></div>
-    <div class="grid" style="margin-top:12px">${ex.subjects.map(s => `<div class="card"><b>${esc(s.subject)}</b> <span class="muted">${s.n}人・平均 ${s.mean}・標準偏差 ${s.sd}</span>${chartSVG(s)}</div>`).join('')}</div>`);
-    bindUser();
-    app.querySelectorAll('[data-se]').forEach(b => b.onclick = () => { store.set('rankExam', b.dataset.se); ranking(app, ['dist']); });
-    if (ex) $('#rg').onclick = () => { const s = ex.subjects[+$('#rs').value]; if ($('#rx').value === '') return; const x = +$('#rx').value;
+    const st = f && f.subjects || [];
+    app.innerHTML = head + `<div class="card">${examSel}${!st.length ? `<p class="muted" style="margin:0">まだ公開できる集計がありません。各科目の提出者が ${MIN_N} 人以上になったら、平均と分布をここに表示します。</p>` : `
+    <p class="muted" style="margin:0">更新 ${esc(f.updated)}・提出 ${f.count} 人。誰の点数か分からない形（人数・平均・標準偏差・10点刻みの人数）だけを表示しています。提出者が ${MIN_N} 人未満の科目は表示しません。</p>`}</div>
+    ${st.length ? `<div class="card" style="margin-top:12px"><h3 style="margin-top:0">自分の位置を調べる</h3><div class="row"><select id="rs">${st.map((s, i) => `<option value="${i}">${esc(s.subject)}</option>`).join('')}</select><input type="number" id="rx" placeholder="自分の点数" style="width:120px"><button class="btn pri" id="rg">調べる</button></div><div id="rr" class="exp" style="display:none"></div><p class="muted" style="margin:8px 0 0">入力した点数は送信されません（この画面の中だけで計算します）。</p></div>
+    <div class="grid" style="margin-top:12px">${st.map(s => `<div class="card"><b>${esc(s.subject)}</b> <span class="muted">${s.n}人・平均 ${s.mean}・標準偏差 ${s.sd}</span>${chartSVG(s)}</div>`).join('')}</div>` : ''}`;
+    bindEx();
+    if (st.length) $('#rg').onclick = () => { const s = st[+$('#rs').value]; if ($('#rx').value === '') return; const x = +$('#rx').value;
       let above = 0; for (const b of s.bins) { if (b.from >= x) above += b.count; else if (b.to > x) above += b.count * (b.to - x) / (b.to - b.from); }
       const p = Math.max(1, Math.round(above / s.n * 100)), dev = s.sd ? (50 + 10 * (x - s.mean) / s.sd).toFixed(1) : '-';
       $('#rr').style.display = 'block'; $('#rr').innerHTML = `${esc(s.subject)} ${x}点は、提出者${s.n}人の中で<b>上位 約${p}%</b>（${Math.max(1, Math.round(p / 100 * s.n))} 番目前後）、偏差値の目安は <b>${dev}</b> です。<br><span class="muted">10点刻みの人数から計算した目安です。提出者だけの集計なので、学年全体の順位とは違います。</span>`; };
     return;
   }
-  if (!FB.user) { app.innerHTML = head + `<p class="muted">点数の提出と順位表は、湘南高校の学校アカウントの人だけが使えます。</p>` + loginBox(); bindLogin(); return; }
-
-  if (tab === 'submit') {
-    const { entry, number } = await FB.loadMine(exSel);
-    const e = entry || { nickname: store.get('nick', ''), public: true, scores: {} };
-    app.innerHTML = head + userBar() + `<div class="card">${examChips(exSel)}
-    <div class="row"><label style="min-width:9em">ニックネーム</label><input type="text" id="fn" maxlength="20" value="${esc(e.nickname)}" placeholder="順位表に載る名前（本名は避けて）" style="flex:1"></div>
-    <div class="row" style="margin-top:8px"><label style="min-width:9em">出席番号（4桁）</label><input type="text" id="fno" maxlength="4" inputmode="numeric" value="${esc(number)}" placeholder="例：1104" style="width:110px"><span class="muted">管理用。順位表にも分布にも出しません</span></div>
-    <h3>点数（0〜100、受けていない・言いたくない科目は空欄）</h3>
-    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${SUBJ.map(s => `<label class="row" style="justify-content:space-between"><span>${s}</span><input type="number" min="0" max="100" data-s="${s}" value="${e.scores[s] ?? ''}" style="width:80px"></label>`).join('')}</div>
-    <label class="chk" style="border:0"><input type="checkbox" id="fp" ${e.public ? 'checked' : ''}><span>順位表にニックネームで載せる（チェックを外すと、分布の集計だけに使います）</span></label>
-    <label class="chk" style="border:0"><input type="checkbox" id="fa"><span>提出した点数が、湘南生限定の順位表（載せる場合）と、誰の点数か分からない形の分布の集計に使われることに同意します。提出後もいつでも修正・削除できます。</span></label>
-    <div class="row"><button class="btn pri" id="fsv">${entry ? '更新する' : '提出する'}</button>${entry ? '<button class="btn" id="fdl">自分のデータを削除</button>' : ''}<span id="fmsg" class="muted"></span></div></div>`;
-    bindUser(); bindEx();
-    $('#fsv').onclick = async () => {
-      const nick = $('#fn').value.trim(), no = $('#fno').value.trim();
-      if (!nick) return $('#fmsg').textContent = 'ニックネームを入れてください。';
-      if (!/^\d{4}$/.test(no)) return $('#fmsg').textContent = '出席番号は4桁の数字で入れてください。';
-      if (!$('#fa').checked) return $('#fmsg').textContent = '同意にチェックしてください。';
-      const scores = {}; let bad = false;
-      app.querySelectorAll('[data-s]').forEach(i => { if (i.value === '') return; const v = +i.value; if (!(v >= 0 && v <= 100)) bad = true; else scores[i.dataset.s] = v; });
-      if (bad) return $('#fmsg').textContent = '点数は0〜100で入れてください。';
-      const all = SUBJ.every(s => s in scores);
-      try { await FB.saveMine(exSel, { nickname: nick, public: $('#fp').checked, scores, total: all ? SUBJ.reduce((a, s) => a + scores[s], 0) : null }, no); store.set('nick', nick); $('#fmsg').textContent = '保存しました。'; }
-      catch (err) { $('#fmsg').textContent = '保存できませんでした：' + err.message; }
-    };
-    if ($('#fdl')) $('#fdl').onclick = async () => { if (!confirm('この試験の自分の点数を削除しますか？')) return; await FB.deleteMine(exSel); ranking(app, ['submit']); };
-    return;
-  }
   // 順位表
-  const list = await FB.listPublic(exSel);
+  const list = f && f.entries || [];
   const subjSel = store.get('rankSub', '合計');
   const val = r => subjSel === '合計' ? r.total : r.scores?.[subjSel];
   const rows = list.filter(r => typeof val(r) === 'number').sort((a, b) => val(b) - val(a));
   let rank = 0, prev = null; rows.forEach((r, i) => { if (val(r) !== prev) rank = i + 1; r._rank = rank; prev = val(r); });
-  app.innerHTML = head + userBar() + `<div class="card">${examChips(exSel)}
+  app.innerHTML = head + `<div class="card">${examSel}
   <div class="chips">${['合計', ...SUBJ].map(s => `<button class="chip ${s === subjSel ? 'on' : ''}" data-rs="${s}">${s}</button>`).join('')}</div>
-  <p class="muted">掲載に同意した提出者 ${rows.length} 人の順位です（合計は11科目すべてを提出した人だけ）。湘南生のログインが必要なページです。スクリーンショットなどで外部に広めないでください。</p>
-  <div class="scroll"><table class="tb"><tr><th>順位</th><th>ニックネーム</th><th>${esc(subjSel)}</th></tr>${rows.map(r => `<tr><td>${r._rank}</td><td>${esc(r.nickname)}</td><td>${val(r)}</td></tr>`).join('') || '<tr><td colspan="3" class="muted">まだ提出がありません。</td></tr>'}</table></div></div>
-  ${FB.isAdmin ? `<div class="card" style="margin-top:12px"><h3 style="margin-top:0">管理者用：公開用の集計を更新</h3><p class="muted">この試験の全提出（掲載しない人も含む）から、人数・平均・標準偏差・10点刻みの人数だけを計算し、「点数の分布」ページに公開します。${MIN_N}人未満の科目は公開しません。</p><button class="btn pri" id="agg">集計を更新する</button> <span id="amsg" class="muted"></span></div>` : ''}`;
-  bindUser(); bindEx();
+  <p class="muted">${f ? `更新 ${esc(f.updated)}・` : ''}掲載に同意した ${rows.length} 人の順位です（合計は11科目すべてを提出した人だけ）。点数は本人の申告で、集計係が確認したものではありません。</p>
+  <div class="scroll"><table class="tb"><tr><th>順位</th><th>ニックネーム</th><th>${esc(subjSel)}</th></tr>${rows.map(r => `<tr><td>${r._rank}</td><td>${esc(r.nickname)}</td><td>${val(r)}</td></tr>`).join('') || `<tr><td colspan="3" class="muted">まだありません。<a href="#/ranking/submit">点数を提出</a>してください。</td></tr>`}</table></div></div>`;
+  bindEx();
   app.querySelectorAll('[data-rs]').forEach(b => b.onclick = () => { store.set('rankSub', b.dataset.rs); ranking(app, ['board']); });
-  if ($('#agg')) $('#agg').onclick = async () => {
-    const all = await FB.listAll(exSel); const subjects = [];
-    for (const s of SUBJ) { const xs = all.map(r => r.scores?.[s]).filter(v => typeof v === 'number'); if (xs.length >= MIN_N) subjects.push({ subject: s, ...statsOf(xs, 100, 10) }); }
-    const ts = all.map(r => r.total).filter(v => typeof v === 'number'); if (ts.length >= MIN_N) subjects.push({ subject: '合計', ...statsOf(ts, 1100, 100) });
-    await FB.writeStats(exSel, { updated: new Date().toISOString().slice(0, 10), subjects });
-    $('#amsg').textContent = `公開しました（${subjects.length} 科目、提出 ${all.length} 件）。`;
-  };
 }
