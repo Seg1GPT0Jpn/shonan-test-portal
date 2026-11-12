@@ -1188,5 +1188,402 @@
    "to"
   ],
   "example_ja": "日本は地震が起こりやすい。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1144,
+  "idiom": "be equal to ～",
+  "meaning": "（人・能力などが）～に耐えられる／～に匹敵する",
+  "note": "元は「～に等しい」。Five plus five is equal to ten.",
+  "example_en": "He is equal to the difficult task.",
+  "blank_answer": [
+   "equal"
+  ],
+  "example_ja": "彼にはその難しい仕事をするだけの力がある。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1145,
+  "idiom": "be aware of ～",
+  "meaning": "～に気づいている／～を知っている",
+  "note": "同意：be conscious of「～を意識している」",
+  "example_en": "As our society becomes more globalized, we need to be more aware of cultural differences.",
+  "blank_answer": [
+   "aware"
+  ],
+  "example_ja": "私たちの社会がよりグローバル化するにつれて，私たちは文化の違いをより意識する必要がある。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1146,
+  "idiom": "be ignorant of ～",
+  "meaning": "～を知らない",
+  "note": "= be unaware of",
+  "example_en": "It seems that he is entirely ignorant of the matter.",
+  "blank_answer": [
+   "ignorant of"
+  ],
+  "example_ja": "彼はその件についてはまったく知らないようだ。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1147,
+  "idiom": "be tired of ～",
+  "meaning": "～にあきている",
+  "note": "比較：be tired from「～で疲れている」 I'm tired of waiting.（待つのはうんざり）／I'm tired from waiting.（待ちくたびれた）",
+  "example_en": "They are tired of Chinese food.",
+  "blank_answer": [
+   "of"
+  ],
+  "example_ja": "彼らは中華料理にあきている。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1148,
+  "idiom": "be sick of ～",
+  "meaning": "～にあきあきしている／～にうんざりしている",
+  "note": "be tired of より強意的。be sick and tired of とも。news は不可算 → much",
+  "example_en": "I've heard so much news about the scandal that I'm sick of it.",
+  "blank_answer": [
+   "much",
+   "sick"
+  ],
+  "example_ja": "そのスキャンダルのニュースは聞きすぎてうんざりしている。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1149,
+  "idiom": "be fed up with ～",
+  "meaning": "～にうんざりしている",
+  "note": "= be tired of / be sick of　fed は feed「食物を与える」の過去分詞",
+  "example_en": "I'm fed up with so many boring TV commercials every day.",
+  "blank_answer": [
+   "up"
+  ],
+  "example_ja": "つまらないテレビコマーシャルが多すぎて，私は毎日うんざりしている。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1150,
+  "idiom": "be based on [upon] ～",
+  "meaning": "～に基づいている",
+  "note": "base A on [upon] B「Aの基礎をBに置く」の受身",
+  "example_en": "The movie was based on a true story.",
+  "blank_answer": [
+   "based on"
+  ],
+  "example_ja": "その映画は実話に基づいていた。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1151,
+  "idiom": "be characteristic of ～",
+  "meaning": "～に特有である",
+  "note": "= be peculiar to",
+  "example_en": "The use of bright colors is characteristic of his paintings.",
+  "blank_answer": [
+   "characteristic of"
+  ],
+  "example_ja": "鮮やかな色使いは，彼の絵に特有のものである。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1152,
+  "idiom": "be peculiar to ～",
+  "meaning": "～に特有である",
+  "note": "= be characteristic of　※前置詞 to に注意",
+  "example_en": "You can see bowing in many places in East Asia; this custom is not peculiar to Japanese people.",
+  "blank_answer": [
+   "peculiar to"
+  ],
+  "example_ja": "東アジアの多くの場所でお辞儀が見られる。この習慣は日本人に特有ではない。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1153,
+  "idiom": "be content(ed) with ～",
+  "meaning": "（完全にとは言えないが）～に満足している",
+  "note": "比較：be satisfied with「（完全に）満足している」",
+  "example_en": "Bob asked me if I was content with my present job.",
+  "blank_answer": [
+   "with"
+  ],
+  "example_ja": "ボブは私に今の仕事に満足しているかどうか聞いた。"
+ },
+ {
+  "theme": "234　be＋形容詞［過去分詞］＋前置詞 ③",
+  "no": 1154,
+  "idiom": "be engaged in ～",
+  "meaning": "～に従事している／～で忙しい",
+  "note": "= be occupied with [in]　比較：be engaged to ～「～と婚約している」",
+  "example_en": "She was engaged in writing a letter.",
+  "blank_answer": [
+   "engaged in"
+  ],
+  "example_ja": "彼女は手紙を書くのに没頭していた。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1155,
+  "idiom": "be composed of ～",
+  "meaning": "～から成り立つ／～で構成されている",
+  "note": "= be made up of / consist of　of は「材料・構成要素」",
+  "example_en": "Our bodies are composed of trillions of cells.",
+  "blank_answer": [
+   "of"
+  ],
+  "example_ja": "私たちの身体は非常に多くの細胞で構成されている。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1156,
+  "idiom": "be made up of ～",
+  "meaning": "～から成り立つ／～で構成されている",
+  "note": "= be composed of / consist of",
+  "example_en": "Our research team is made up of young researchers from all over the world.",
+  "blank_answer": [
+   "made up"
+  ],
+  "example_ja": "私たちの研究チームは世界中の若い研究者から成る。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1157,
+  "idiom": "be opposed to ～",
+  "meaning": "～に反対している",
+  "note": "= be against／oppose ～ / object to ～　比較：be opposite to「～とは正反対である」",
+  "example_en": "Naoko wasn't opposed to the idea, but she wasn't happy about it either.",
+  "blank_answer": [
+   "opposed to"
+  ],
+  "example_ja": "ナオコはその考えに反対ではなかったが，満足もしていなかった。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1158,
+  "idiom": "be fond of ～",
+  "meaning": "～が好きである",
+  "note": "= like",
+  "example_en": "Mary is fond of running because it makes her feel refreshed.",
+  "blank_answer": [
+   "fond"
+  ],
+  "example_ja": "リフレッシュできるので，メアリーはランニングが好きだ。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1159,
+  "idiom": "be keen on ～",
+  "meaning": "～が大好きである／～に夢中である",
+  "note": "「～を熱望している」の意味も：He is keen on going overseas. = He is keen to go overseas.",
+  "example_en": "He is not very keen on classical music.",
+  "blank_answer": [
+   "on"
+  ],
+  "example_ja": "彼はクラシック音楽はあまり好きではない。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1160,
+  "idiom": "be responsible for ～",
+  "meaning": "～に責任がある",
+  "note": "同意：answer for ～「～の責任を負う」",
+  "example_en": "He is the boss, so he is responsible for anything that goes wrong.",
+  "blank_answer": [
+   "responsible for"
+  ],
+  "example_ja": "彼は上司なので，何か不都合が生じれば彼に責任がある。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1161,
+  "idiom": "be sure of ～",
+  "meaning": "～を確信している",
+  "note": "= be certain of　He is sure of success.＝本人が確信／He is sure to succeed.＝話し手が確信（きっと成功する）",
+  "example_en": "I am sure of your success.",
+  "blank_answer": [
+   "sure of"
+  ],
+  "example_ja": "私はあなたの成功を確信している。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1162,
+  "idiom": "be similar to ～",
+  "meaning": "～に似ている",
+  "note": "= be akin to",
+  "example_en": "My idea is similar to yours.",
+  "blank_answer": [
+   "to"
+  ],
+  "example_ja": "私の考えはあなたの考えと似ている。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1163,
+  "idiom": "be good at ～",
+  "meaning": "～が得意である",
+  "note": "⇔ be poor at / be weak in「～が苦手である」",
+  "example_en": "You're not very good at reading maps, are you?",
+  "blank_answer": [
+   "at"
+  ],
+  "example_ja": "君は地図を読むのがあまり得意ではないですね。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1164,
+  "idiom": "be interested in ～",
+  "meaning": "～に興味がある",
+  "note": "比較：have [take] (an) interest in ～「～に興味を持つ」",
+  "example_en": "Since he will be moving to Japan, Carl is interested in learning Japanese.",
+  "blank_answer": [
+   "interested in"
+  ],
+  "example_ja": "日本に引っ越す予定なので，カールは日本語の習得に関心を持っている。"
+ },
+ {
+  "theme": "235　be＋形容詞［過去分詞］＋前置詞 ④",
+  "no": 1165,
+  "idiom": "be noted for ～",
+  "meaning": "～で有名である",
+  "note": "= be famous for",
+  "example_en": "Korean food is noted for its spicy flavor.",
+  "blank_answer": [
+   "for"
+  ],
+  "example_ja": "韓国料理は香辛料のきいた味で有名である。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1166,
+  "idiom": "be sure to do",
+  "meaning": "必ず～する／きっと～する",
+  "note": "= be certain to do　（命令文 Be sure to ～「必ず～しなさい」）",
+  "example_en": "Be sure to make a reservation before going to the restaurant.",
+  "blank_answer": [
+   "sure"
+  ],
+  "example_ja": "そのレストランに行く前に必ず予約するようにしなさい。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1167,
+  "idiom": "be bound to do",
+  "meaning": "必ず～する／きっと～する",
+  "note": "bound は bind「縛る」の過去分詞。be bound for ～「（乗り物が）～行きである」も重要",
+  "example_en": "We are bound to be late if you don't hurry.",
+  "blank_answer": [
+   "bound"
+  ],
+  "example_ja": "君が急がないと，私たちはきっと遅れるよ。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1168,
+  "idiom": "be supposed to do",
+  "meaning": "～することになっている／～すると思われている",
+  "note": "⇔ be not supposed to do「～してはいけないことになっている」",
+  "example_en": "All the documents are supposed to be submitted by the end of this month.",
+  "blank_answer": [
+   "supposed"
+  ],
+  "example_ja": "すべての書類は今月末までに提出することになっています。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1169,
+  "idiom": "be willing to do",
+  "meaning": "～してもよいと思っている／～するのをいとわない",
+  "note": "be ready to do「喜んで～する」ほど積極的ではない",
+  "example_en": "If you're willing to join the team, just let us know.",
+  "blank_answer": [
+   "willing"
+  ],
+  "example_ja": "チームに参加してもよいと思っているのなら，私たちに連絡してください。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1170,
+  "idiom": "be reluctant to do",
+  "meaning": "～するのは気が進まない",
+  "note": "= be unwilling to do",
+  "example_en": "He seemed to be reluctant to join in the meeting.",
+  "blank_answer": [
+   "reluctant"
+  ],
+  "example_ja": "彼は会合に参加するのは気が進まないようだった。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1171,
+  "idiom": "be apt to do",
+  "meaning": "～しがちである／～する傾向がある",
+  "note": "= tend to do　liable / prone / inclined もほぼ同意",
+  "example_en": "The idle are apt to miss a good chance.",
+  "blank_answer": [
+   "apt"
+  ],
+  "example_ja": "怠け者は好機を逃しがちです。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1172,
+  "idiom": "be [feel] free to do",
+  "meaning": "自由に～できる",
+  "note": "Please feel free to do「遠慮なく～してください」の形でよく出る",
+  "example_en": "Please feel free to have anything in the refrigerator.",
+  "blank_answer": [
+   "feel"
+  ],
+  "example_ja": "冷蔵庫の中のものは何でもご自由にどうぞ。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1173,
+  "idiom": "be likely to do",
+  "meaning": "～しそうである／～する可能性が高い",
+  "note": "⇔ be unlikely to do「～しそうもない」",
+  "example_en": "The company is likely to recover from the recent financial crisis.",
+  "blank_answer": [
+   "is likely"
+  ],
+  "example_ja": "その会社は近ごろの金融危機から回復する可能性が高い。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1174,
+  "idiom": "be about to do",
+  "meaning": "まさに［今にも］～しようとしている",
+  "note": "be (just) going to do より差し迫った未来。= be on the point of doing",
+  "example_en": "She was about to leave home.",
+  "blank_answer": [
+   "about"
+  ],
+  "example_ja": "彼女はちょうど家を出るところだった。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1175,
+  "idiom": "be forced to do",
+  "meaning": "～せざるを得ない",
+  "note": "= be compelled [obliged] to do　force A to do「（無理やり）Aに～させる」の受身",
+  "example_en": "He was forced to go back because of the bad weather.",
+  "blank_answer": [
+   "forced"
+  ],
+  "example_ja": "彼は悪天候のため引き返さざるをえなかった。"
+ },
+ {
+  "theme": "236　be＋形容詞［過去分詞］＋to do",
+  "no": 1176,
+  "idiom": "be anxious to do",
+  "meaning": "しきりに～したがっている",
+  "note": "= be eager to do　比較：be anxious [eager] for ～「～を切望している」",
+  "example_en": "Mr. Kubo hurried home because he was so anxious to meet his children.",
+  "blank_answer": [
+   "anxious"
+  ],
+  "example_ja": "クボさんは子どもたちに会いたい一心で，急いで帰宅した。"
  }
 ]

@@ -191,7 +191,7 @@ async function quiz(app, [kind, file]) {
   app.innerHTML = `<h1>ミニテスト</h1>
   <div class="grid">
     <a class="card mat" style="text-decoration:none;color:inherit" href="#/quiz/leap"><span class="k">英語</span><span class="t">LEAP 単語テスト</span><span class="muted">範囲を選んで4択（英→日／日→英）</span>${hist.leap ? `<span class="muted">前回 ${hist.leap}</span>` : ''}</a>
-    <a class="card mat" style="text-decoration:none;color:inherit" href="#/quiz/idiom"><span class="k">LEⅠ</span><span class="t">Scramble イディオム（Theme 225〜233）</span><span class="muted">意味の4択・空所補充</span>${hist.idiom ? `<span class="muted">前回 ${hist.idiom}</span>` : ''}</a>
+    <a class="card mat" style="text-decoration:none;color:inherit" href="#/quiz/idiom"><span class="k">LEⅠ</span><span class="t">Scramble イディオム（Theme 225〜236）</span><span class="muted">意味の4択・空所補充</span>${hist.idiom ? `<span class="muted">前回 ${hist.idiom}</span>` : ''}</a>
   </div>
   <h2>選択問題（予想問題・参考書から）</h2>${group('mc') || '<div class="card muted">準備中です。</div>'}
   <h2>用語の一問一答</h2>${group('term') || '<div class="card muted">準備中です。</div>'}`;
